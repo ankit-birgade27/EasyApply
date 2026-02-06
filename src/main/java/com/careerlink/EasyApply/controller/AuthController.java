@@ -23,7 +23,9 @@ public class AuthController {
 
 	@PostMapping("/saved")
 	public ResponseEntity<User> register(@RequestBody User user) {
+
 	User savedUser=	service.register(user);
+	System.out.println(savedUser);
 	return  ResponseEntity.status(HttpStatus.OK).body(savedUser);
 		}
 	

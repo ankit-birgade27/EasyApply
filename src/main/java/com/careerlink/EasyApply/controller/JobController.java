@@ -28,6 +28,7 @@ public class JobController {
 public Job  savedJob( @RequestHeader("role") String role,
 		@RequestBody Job job) {
 		Job savedJob=service.addJob(role, job);
+		System.out.println(savedJob);
 	return savedJob;}
 	
 	@GetMapping("/all")
